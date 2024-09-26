@@ -1,17 +1,33 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer';
-import Header from './Components/Header';
 import Main from './Components/Main';
 import Nav from './Components/Nav';
+import Home from './Home';
+import About from './About';
+import Reservation from './Reservation';
+import OrderOnline from './OrderOnline';
+import Login from './Login';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Nav />
+            <Main />
+            <Footer />
+          </>
+        }>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="reservation" element={<Reservation />} />
+          <Route path="order" element={<OrderOnline />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
