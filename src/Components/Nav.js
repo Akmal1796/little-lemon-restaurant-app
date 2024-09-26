@@ -4,7 +4,7 @@ import logo from '..//Images/logo 1.jpg'
 const Nav = () => {
   return (
     <nav>
-        <img src={logo} />
+        <img src={logo} className='logo'/>
         <ul>
             <li><a href='#'>Home</a></li>
             <li><a href='#about'>About</a></li>
