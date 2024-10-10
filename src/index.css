@@ -22,21 +22,33 @@ footer {
 nav {
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 .logo {
-  width: 120px;
-  height: 30px;
+  margin-left: 15px;
+  width: 180px;
+  height: 60px;
 }
 
 nav ul {
   display: flex;
-  gap: 25px;
+  gap: 38px;
   list-style: none;
+  margin-left: 55px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  font-size: 24px;
+}
+
+nav ul li a:hover {
+  color: rgb(82, 82, 82);
+}
+
+nav ul li a:active {
+  color: black;
 }
