@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+/* Home Page Design */
+
+.homepage-banner {
+  background-color: #495E57;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.banner-text-container {
+  width: 340px;
+}
+
+.banner-text-container h1 {
+  font-size: 56px;
+  color: #d4b412;
+  margin: 0;
+}
+
+.banner-text-container h3 {
+  font-size: 38px;
+  font-weight: normal;
+  margin-top: -15px;
+}
+
+.banner-text-container h3, p {
+  color: white;
+}
+
+.banner-text-container p {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.reserve-btn {
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-size: 22px;
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.reserve-btn:hover {
+  background-color: #f4da58;
+}
+
+.reserve-btn:active {
+  background-color: #f1c905;
+}
+
+.banner-image {
+  position: absolute;
+  top: 40px;
+  right: 270px;
+  width: 480px;
+  height: 550px;
+  border-radius: 10px;
+}
