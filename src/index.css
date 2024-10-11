@@ -52,3 +52,19 @@ nav ul li a:hover {
 nav ul li a:active {
   color: black;
 }
+
+@media only screen and (max-width: 480px) {
+  
+}
+
+@media only screen and (max-width: 767px) {
+  
+}
+
+@media only screen and (max-width: 1024px) {
+  
+}
+
+@media only screen and (max-width: 1280px) {
+  
+}
