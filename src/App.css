@@ -402,3 +402,35 @@ form {
   max-width: 200px;
   gap: 20px;
 }
+
+
+/* About Page */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  gap: 100px;
+  width: 100%;
+}
+
+.first-base,
+.second-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-base .about-section-text-content {
+  margin-right: 40px;
+}
+
+.second-base {
+  margin-top: 150px;
+}
+
+.second-base .about-section-text-content {
+  margin-left: 150px;
+}
