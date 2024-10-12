@@ -379,3 +379,14 @@
   gap: 10px;
   font-size: 30px;
 }
+
+
+
+
+/* Reservation Page */
+
+form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
