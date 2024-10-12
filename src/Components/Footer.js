@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import footerLogo from "../Images/logo 8.png";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -11,15 +12,14 @@ const Footer = () => {
         <img src={footerLogo} alt='Little Lemon Logo' className='footer-logo' />
       </div>
       <div className='quicklink-container'>
-        <h2>Quik Links</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href='#'>About</a></li>
-          <li><a href='#'>Menu</a></li>
-          <li><a href='#'>Reservations</a></li>
-          <li><a href='#'>Order Online</a></li>
-          <li><a href='#'>Login</a></li>
-        </ul>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/reservation">Reservations</Link></li>
+        <li><Link to="/order">Order Online</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
       </div>
       <div className='contact-detail-container'>
         <h2>Contact</h2>
