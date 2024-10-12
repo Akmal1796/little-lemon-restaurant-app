@@ -248,7 +248,7 @@
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
-  transition: box-shadow 0.15s;
+  transition: box-shadow 0.25s;
 }
 
 .review-card-container:hover {
@@ -288,4 +288,50 @@
 .start-icons {
   margin-top: 0;
   color: #f1c905;
+}
+
+.about-section {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.about-section-text-content {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.about-section-text-content h1 {
+  font-size: 52px;
+  margin-bottom: 0;
+}
+
+.about-section-text-content h3 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.about-section-text-content p {
+  font-size: 20px;
+  margin-top: 0;
+  color: black;
+}
+
+.about-section-image-content {
+  position: relative;
+}
+
+.float-img {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+
+.restaurant-img {
+  object-fit: cover;
+  width: 300px;
+  height: 400px;
 }

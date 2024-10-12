@@ -9,6 +9,8 @@ import Profile01 from "./Images/profile 01.jpg";
 import Profile02 from "./Images/profile 02.jpg";
 import Profile03 from "./Images/profile 03.jpg";
 import Profile04 from "./Images/profile 04.jpeg";
+import RestauranIMG01 from "./Images/restaurant01.jpg";
+import RestauranIMG02 from "./Images/restaurant02.jpg";
 
 const Home = () => {
   return (
@@ -147,6 +149,17 @@ const Home = () => {
             <FaStar />
             <FaStar />
           </div>
+        </div>
+      </section>
+      <section className='about-section'>
+        <div className='about-section-text-content'>
+          <h1>Little Lemon</h1>
+          <h3>Chicago</h3>
+          <p>We are a family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist. Our menu features fresh, locally sourced ingredients, offering vibrant dishes that celebrate the rich flavors of the Mediterranean. Join us for a memorable dining experience!</p>
+        </div>
+        <div className='about-section-image-content'>
+          <img src={RestauranIMG01} alt='Restaurant Image' className='restaurant-img' />
+          <img src={RestauranIMG02} alt='Restaurant Image' className='restaurant-img float-img' />
         </div>
       </section>
     </main>
