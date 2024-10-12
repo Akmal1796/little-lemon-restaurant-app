@@ -4,11 +4,16 @@ import GreekSalad from "./Images/recipe 1.jpg";
 import Bruchetta from "./Images/recipe 4.jpg";
 import LemonDesert from "./Images/LemonDessert.jpg";
 import { RiEBike2Fill } from "react-icons/ri";
+import { FaStar, FaRegStarHalfStroke } from "react-icons/fa6";
+import Profile01 from "./Images/profile 01.jpg";
+import Profile02 from "./Images/profile 02.jpg";
+import Profile03 from "./Images/profile 03.jpg";
+import Profile04 from "./Images/profile 04.jpeg";
 
 const Home = () => {
   return (
     <main className='home-page'>
-      <div className='homepage-banner'>
+      <section className='homepage-banner'>
         <div className='banner-text-container'>
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
@@ -18,7 +23,7 @@ const Home = () => {
         <div className='banner-img-container'>
           <img src={heroIMG} alt='hreo-image' className='banner-image'/>
         </div>
-      </div>
+      </section>
       <section className='specials'>
         <div className='specials-header'>
           <h1>This Weeks Specials!</h1>
@@ -72,6 +77,75 @@ const Home = () => {
               <p>Order a delivery</p>
               <RiEBike2Fill />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className='reviews-section'>
+        <div className='review-card-container'>
+          <div className='review-header'>
+            <img src={Profile01} alt='Profile Image' className='profile-img' />
+            <p className='review-title-container'>
+              <span className='review-name'>Sarah</span>
+              <span>Food Enthusiast</span>
+            </p>
+          </div>
+          <p className='review-description'>"A fresh Mediterranean salad with cucumbers, tomatoes, feta, olives, and a tangy olive oil dressing."</p>
+          <div className='start-icons'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaRegStarHalfStroke />
+          </div>
+        </div>
+        <div className='review-card-container'>
+          <div className='review-header'>
+            <img src={Profile02} alt='Profile Image' className='profile-img' />
+            <p className='review-title-container'>
+              <span className='review-name'>Alicia</span>
+              <span>Food Critic</span>
+            </p>
+          </div>
+          <p className='review-description'>"A delicious Italian starter featuring grilled bread topped with fresh tomatoes, garlic, and basil."</p>
+          <div className='start-icons'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+        </div>
+        <div className='review-card-container'>
+          <div className='review-header'>
+            <img src={Profile03} alt='Profile Image' className='profile-img' />
+            <p className='review-title-container'>
+              <span className='review-name'>David</span>
+              <span>Pastry Chef</span>
+            </p>
+          </div>
+          <p className='review-description'>"A tangy, sweet treat with zesty lemon flavor and creamy texture."</p>
+          <div className='start-icons'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+        </div>
+        <div className='review-card-container'>
+          <div className='review-header'>
+            <img src={Profile04} alt='Profile Image' className='profile-img' />
+            <p className='review-title-container'>
+              <span className='review-name'>Mark</span>
+              <span>Culinary Expert</span>
+            </p>
+          </div>
+          <p className='review-description'>"A refreshing blend of crisp veggies, tangy feta, and olives, oregano. Perfectly balanced and healthy."</p>
+          <div className='start-icons'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
           </div>
         </div>
       </section>

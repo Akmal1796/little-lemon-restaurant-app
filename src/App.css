@@ -163,6 +163,12 @@
   background-color: rgb(234, 234, 234);
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.card-container:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .reciep-img {
@@ -225,4 +231,61 @@
 
 @media only screen and (max-width: 1280px) {
   
+}
+
+.reviews-section {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-card-container {
+  background-color: aliceblue;
+  width: 220px;
+  height: 230px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.review-card-container:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.review-header {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.review-title-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.review-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.review-description {
+  color: black;
+}
+
+.profile-img {
+  object-fit: cover;
+  object-position: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 0;
+  border-radius: 50%;
+}
+
+.start-icons {
+  margin-top: 0;
+  color: #f1c905;
 }
