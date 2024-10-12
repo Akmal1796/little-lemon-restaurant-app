@@ -11,7 +11,6 @@ import Profile03 from "./Images/profile 03.jpg";
 import Profile04 from "./Images/profile 04.jpeg";
 import RestauranIMG01 from "./Images/restaurant01.avif";
 import RestauranIMG02 from "./Images/restaurant02.avif";
-import Footer from './Components/Footer';
 
 const Home = () => {
   return (
@@ -163,7 +162,6 @@ const Home = () => {
           <img src={RestauranIMG02} alt='Restaurant Image' className='restaurant-img float-img' />
         </div>
       </section>
-      <Footer />
     </main>
   )
 }

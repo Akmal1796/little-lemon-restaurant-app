@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Main from './Components/Main';
-import Nav from './Components/Nav';
+import Header from './Components/Header';
 import Home from './Home';
 import About from './About';
 import Reservation from './Reservation';
@@ -15,8 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <Nav />
+            <Header />
             <Main />
+            <Footer />
           </>
         }>
           <Route index element={<Home />} />

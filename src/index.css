@@ -20,7 +20,7 @@ footer {
   display: flex;
 }
 
-nav {
+header {
   align-items: center;
   justify-content: center;
   padding: 10px;
