@@ -397,10 +397,12 @@
 
 /* Reservation Page */
 
-form {
-  display: grid;
-  max-width: 200px;
-  gap: 20px;
+.booking-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 

@@ -1,0 +1,98 @@
+/* Booking Form Container */
+.booking-form {
+    width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 4rem 2rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin-bottom: -150px;
+    margin-top: 60px;
+  }
+
+  /* Form Title */
+  .booking-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  /* Form Labels */
+  .booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  /* Form Inputs */
+  .booking-form input[type="number"],
+  .booking-form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+
+  .booking-form input[type="date"] {
+    width: 97%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+
+  /* Input Focus State */
+  .booking-form input:focus,
+  .booking-form select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  /* Form Button */
+  .booking-form input[type="submit"] {
+    width: 20%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Button Hover Effect */
+  .booking-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Flex Layout for Guests and Occasion */
+  .booking-form .form-group {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* For Two Equal Inputs */
+  .booking-form .form-group .form-item {
+    flex: 1;
+  }
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    .booking-form .form-group {
+      flex-direction: column;
+    }
+
+    .booking-form input[type="submit"] {
+      margin-top: 1rem;
+    }
+  }
