@@ -1,8 +1,8 @@
 import React from 'react';
 import RestauranIMG01 from "./Images/restaurant01.avif";
 import RestauranIMG02 from "./Images/restaurant02.avif";
-import RestauranIMG03 from "./Images/restaurant01.jpg";
-import RestauranIMG04 from "./Images/restaurant02.jpg";
+import RestauranIMG03 from "./Images/restaurant01.jpeg";
+import RestauranIMG04 from "./Images/restaurant02.jpeg";
 
 const About = () => {
   return (
