@@ -41,6 +41,8 @@
 
 .home-page {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .homepage-banner {
@@ -110,6 +112,104 @@
   height: 550px;
   border-radius: 10px;
 }
+
+.online-menu-btn {
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-size: 22px;
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.online-menu-btn:hover {
+  background-color: #f4da58;
+}
+
+.online-menu-btn:active {
+  background-color: #f1c905;
+}
+
+.specials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.specials-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.specials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.specials-header h1 {
+  font-size: 50px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reciep-img {
+  width: 320px;
+  height: 300px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-title p {
+  font-weight: bold;
+}
+
+.reciep-name {
+  color: black;
+  font-weight: bold;
+}
+
+.reciep-price {
+  color: orange;
+}
+
+.reciep-description p {
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.order-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.order-section p {
+  color: black;
+  font-weight: bold;
+}
+
 
 @media only screen and (max-width: 480px) {
   

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../Images/logo 1.jpg';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from "react-icons/gi";
+//import { GiHamburgerMenu } from "react-icons/gi";
 
 const Nav = () => {
   return (
