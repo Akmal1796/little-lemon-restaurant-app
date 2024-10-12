@@ -9,8 +9,10 @@ import Profile01 from "./Images/profile 01.jpg";
 import Profile02 from "./Images/profile 02.jpg";
 import Profile03 from "./Images/profile 03.jpg";
 import Profile04 from "./Images/profile 04.jpeg";
-import RestauranIMG01 from "./Images/restaurant01.jpg";
-import RestauranIMG02 from "./Images/restaurant02.jpg";
+import RestauranIMG01 from "./Images/restaurant01.avif";
+import RestauranIMG02 from "./Images/restaurant02.avif";
+import footerLogo from "./Images/logo 8.png";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -160,6 +162,38 @@ const Home = () => {
         <div className='about-section-image-content'>
           <img src={RestauranIMG01} alt='Restaurant Image' className='restaurant-img' />
           <img src={RestauranIMG02} alt='Restaurant Image' className='restaurant-img float-img' />
+        </div>
+      </section>
+      <section className='footer-section'>
+        <div>
+          <img src={footerLogo} alt='Little Lemon Logo' className='footer-logo' />
+        </div>
+        <div className='quicklink-container'>
+          <h2>Quik Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Menu</a></li>
+            <li><a href='#'>Reservations</a></li>
+            <li><a href='#'>Order Online</a></li>
+            <li><a href='#'>Login</a></li>
+          </ul>
+        </div>
+        <div className='contact-detail-container'>
+          <h2>Contact</h2>
+          <ul>
+            <li>Admin</li>
+            <li>Phone Number</li>
+            <li>Email</li>
+          </ul>
+        </div>
+        <div className='social-link-container'>
+          <h2>Social Media Links</h2>
+          <ul>
+            <li><a href='facebook.com'><FaFacebook color='blue' /></a></li>
+            <li><a href='instagram.com'><FaInstagram color='red' /></a></li>
+            <li><a href='twitter.com'><FaTwitter color='#1DA1F2' /></a></li>
+          </ul>
         </div>
       </section>
     </main>

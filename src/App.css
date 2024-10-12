@@ -335,3 +335,47 @@
   width: 300px;
   height: 400px;
 }
+
+.footer-section {
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 220px;
+  background-color: aliceblue;
+}
+
+.footer-logo {
+  width: 75px;
+  height: 150px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.quicklink-container,
+.contact-detail-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
+.social-link-container ul {
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+}

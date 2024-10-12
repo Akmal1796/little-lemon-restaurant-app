@@ -17,7 +17,6 @@ function App() {
           <>
             <Nav />
             <Main />
-            <Footer />
           </>
         }>
           <Route index element={<Home />} />
