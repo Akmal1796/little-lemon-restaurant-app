@@ -2,12 +2,12 @@ import React, { useReducer } from 'react';
 import { Outlet } from 'react-router-dom';
 
 // Initialize times (you can expand this logic later)
-const initializeTimes = () => {
+export const initializeTimes = () => {
   return ["17:00", "18:00", "19:00", "20:00", "21:00"];
 };
 
 // Reducer function to update times based on date
-const updateTimes = (state, action) => {
+export const updateTimes = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
       // For now, return the same available times regardless of the date
