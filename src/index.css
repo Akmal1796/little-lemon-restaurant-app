@@ -24,6 +24,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  background-color: rgb(236, 236, 236);
 }
 
 .logo {
