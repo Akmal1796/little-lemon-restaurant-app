@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import heroIMG from './Images/recipe 2.jpg';
 import GreekSalad from "./Images/recipe 1.jpg";
 import Bruchetta from "./Images/recipe 4.jpg";
@@ -20,7 +21,7 @@ const Home = () => {
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
           <p>We are a family owned Mediterranean restaurant. Focused on traditional recipes served with a modern twist.</p>
-          <button className='reserve-btn'>Reserve a Table</button>
+          <button className='reserve-btn'><Link to="/reservation" className='table-reserve-link'>Reserve a Table</Link></button>
         </div>
         <div className='banner-img-container'>
           <img src={heroIMG} alt='hreo-image' className='banner-image'/>

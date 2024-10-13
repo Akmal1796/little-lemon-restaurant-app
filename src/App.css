@@ -92,6 +92,12 @@
   transition: background-color 0.15s;
 }
 
+.table-reserve-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 .reserve-btn:hover {
   background-color: #f4da58;
 }
