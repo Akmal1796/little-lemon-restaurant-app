@@ -24,6 +24,7 @@ function BookingForm({ availableTimes, dispatch }) {
       [name]: value
     });
 
+    // Dispatch the date change to update available times
     if (name === 'selectedDate') {
       dispatch({ type: 'UPDATE_TIMES', payload: value });
     }
