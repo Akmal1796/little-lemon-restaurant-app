@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./Booking.css";
 
-// Function to simulate fetching available times from the API based on the selected date
 const fetchAPI = (date) => {
   let result = [];
-  const seed = date.getDate();  // Use the date's day of the month as the seed
-  let random = seededRandom(seed); // Create a seeded random function
+  const seed = date.getDate();
+  let random = seededRandom(seed);
 
-  // Generate time slots based on the seeded random function
   for (let i = 17; i <= 23; i++) {
     if (random() < 0.5) {
       result.push(i + ':00');
@@ -19,7 +17,6 @@ const fetchAPI = (date) => {
   return result;
 };
 
-// Function to create a seeded random number generator based on a given seed
 const seededRandom = function (seed) {
   var m = 2 ** 35 - 31;
   var a = 185852;
@@ -30,7 +27,6 @@ const seededRandom = function (seed) {
 };
 
 const submitAPI = async (formData) => {
-  // Implement your API submission logic here
   try {
     const response = await fetch('/api/submit-booking', {
       method: 'POST',
@@ -50,7 +46,6 @@ const submitAPI = async (formData) => {
   }
 };
 
-// The BookingForm component
 function BookingForm({ dispatch }) {
   const [formData, setFormData] = useState({
     selectedDate: '',
@@ -61,36 +56,32 @@ function BookingForm({ dispatch }) {
 
   const [availableTimes, setAvailableTimes] = useState([]);
 
-  // Fetch available times based on the selected date
   const initializeTimes = () => {
-    const today = getCurrentDate(); // Current date in 'YYYY-MM-DD' format
+    const today = getCurrentDate();
     if (!formData.selectedDate) {
       console.log('No date selected, setting to today:', today);
       setFormData({ ...formData, selectedDate: today });
     }
-    fetchAvailableTimes(today); // Initialize times with today's date
+    fetchAvailableTimes(today);
   };
 
-  // Fetch available times from the API and update the state
   const fetchAvailableTimes = (date) => {
     console.log('Fetching available times for date:', date);
-    const times = fetchAPI(new Date(date)); // Call the API with the selected date
+    const times = fetchAPI(new Date(date));
     console.log('Available times:', times);
-    setAvailableTimes(times); // Set the available times
+    setAvailableTimes(times);
     if (times.length > 0) {
-      setFormData((prevData) => ({ ...prevData, selectedTime: times[0] })); // Default to the first available time
+      setFormData((prevData) => ({ ...prevData, selectedTime: times[0] }));
     }
   };
 
-  // Update available times when a new date is selected
   const updateTimes = (date) => {
     console.log('Date selected:', date);
-    setFormData({ ...formData, selectedDate: date }); // Update selectedDate in formData
+    setFormData({ ...formData, selectedDate: date });
     fetchAvailableTimes(date);
-    dispatch({ type: 'UPDATE_TIMES', payload: date }); // Dispatch date change to update the times
+    dispatch({ type: 'UPDATE_TIMES', payload: date });
   };
 
-  // Handle form data changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -98,13 +89,11 @@ function BookingForm({ dispatch }) {
       [name]: value,
     });
 
-    // If date changes, update the available times
     if (name === 'selectedDate') {
       updateTimes(value);
     }
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitting form with data:', formData);
@@ -115,19 +104,17 @@ function BookingForm({ dispatch }) {
     }
   };
 
-  // Initialize times when the component mounts
   useEffect(() => {
     console.log('Component mounted, initializing times');
     initializeTimes();
-  }, []); // Empty dependency array ensures this only runs once, when the component mounts
+  }, []);
 
-  // Get today's date in 'YYYY-MM-DD' format for the minimum date
   const getCurrentDate = () => {
     const today = new Date();
     const year = today.getFullYear();
     const month = (today.getMonth() + 1).toString().padStart(2, '0');
     const day = today.getDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`; // Returns the date in 'YYYY-MM-DD' format
+    return `${year}-${month}-${day}`;
   };
 
   return (
@@ -141,7 +128,7 @@ function BookingForm({ dispatch }) {
         name="selectedDate"
         value={formData.selectedDate}
         onChange={handleInputChange}
-        min={getCurrentDate()} // Ensure the min date is set to today's date
+        min={getCurrentDate()}
         required
       />
 
