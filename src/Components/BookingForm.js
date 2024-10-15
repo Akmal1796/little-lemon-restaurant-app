@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Booking.css";
+import ConfirmedBooking from './ConfirmedBooking';
 
 const fetchAPI = (date) => {
   let result = [];
@@ -28,31 +29,32 @@ const seededRandom = function (seed) {
 
 const submitAPI = async (formData) => {
   try {
-    const response = await fetch('/api/submit-booking', {
+    const response = await fetch('https://raw.githubusercontent.com/courseraap/capstone/main/api.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
+
     const data = await response.json();
-    if (data.success) {
-      console.log('Form submitted successfully');
-    } else {
-      console.error('Form submission failed:', data.message);
-    }
+
+    return data;
   } catch (error) {
     console.error('Error submitting form:', error);
+    return { success: false, message: 'An error occurred while submitting the form' };
   }
 };
 
-function BookingForm({ dispatch }) {
+function BookingForm({ dispatch, submitForm  }) {
   const [formData, setFormData] = useState({
     selectedDate: '',
     selectedTime: '',
     guests: 1,
     occasion: '',
   });
+
+  const [confirmationMessage, setConfirmationMessage] = useState(null);
 
   const [availableTimes, setAvailableTimes] = useState([]);
 
@@ -94,13 +96,24 @@ function BookingForm({ dispatch }) {
     }
   };
 
-  const handleSubmit = (e) => {
+/*   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitting form with data:', formData);
     if (submitAPI(formData)) {
       console.log('Form submitted successfully with data:', formData);
     } else {
       console.error('Form submission failed');
+    }
+  };
+ */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await submitAPI(formData);
+    if (response.success) {
+      setConfirmationMessage('Booking successful! ' + response.message);
+    } else {
+      setConfirmationMessage('Booking failed! ' + response.message);
     }
   };
 
@@ -179,6 +192,8 @@ function BookingForm({ dispatch }) {
       </div>
 
       <input type="submit" value="Make Your reservation" className='form-submit-btn' />
+
+      {confirmationMessage && <ConfirmedBooking message={confirmationMessage} />}
     </form>
   );
 }

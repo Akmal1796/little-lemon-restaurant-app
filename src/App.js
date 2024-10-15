@@ -9,6 +9,7 @@ import About from './About';
 import Reservation from './Reservation';
 import OrderOnline from './OrderOnline';
 import Login from './Login';
+import ConfirmedBooking from './Components/ConfirmedBooking';
 
 function initializeTimes() {
   return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
@@ -23,9 +24,7 @@ function updateTimes(state, action) {
   }
 }
 
-
 function App() {
-
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
   return (
@@ -43,6 +42,7 @@ function App() {
           <Route path="reservation" element={<Reservation availableTimes={availableTimes} dispatch={dispatch} />} />
           <Route path="order" element={<OrderOnline />} />
           <Route path="login" element={<Login />} />
+          <Route path="confirmed-booking" element={<ConfirmedBooking />} />
         </Route>
       </Routes>
     </Router>
